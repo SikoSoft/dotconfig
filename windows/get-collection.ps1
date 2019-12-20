@@ -4,7 +4,7 @@ param(
 
 $Currentlocation = Get-Location
 
-#& "$PSScriptRoot\update-repo.ps1"
+& "$PSScriptRoot\update-repo.ps1"
 
 Set-Location $Currentlocation
 
