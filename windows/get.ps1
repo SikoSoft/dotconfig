@@ -1,13 +1,15 @@
 
 param(
-  [Parameter(Mandatory = $True, Position = 0, ValueFromPipeline = $false)][System.String]$configFile
+  [Parameter(Mandatory = $True, Position = 0, ValueFromPipeline = $false)][System.String]$configFile,
+  [Parameter(Mandatory = $False, Position = 1, ValueFromPipeline = $false)][switch]$u = $false
 )
 
-$Currentlocation = Get-Location
-
-& "$PSScriptRoot\update-repo.ps1"
-
-Set-Location $Currentlocation
+if ($u) {
+  Write-Output "Updating the repo..."
+  $Currentlocation = Get-Location
+  & "$PSScriptRoot\update-repo.ps1"
+  Set-Location $Currentlocation
+}
 
 if (Test-Path "$PSScriptRoot\..\config\$configFile") {
   Copy-Item -Path "$PSScriptRoot\..\config\$configFile" -Destination ".\$configFile"
