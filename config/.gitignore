@@ -1,2 +1,8 @@
+.editorconfig
+.eslintrc.json
+.gitattributes
+.gitignore
+.prettier
+
 .scannerwork
 node_modules
