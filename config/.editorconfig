@@ -1,7 +1,7 @@
 [*]
 end_of_line = lf
 
-[*.js]
+[*.{css,scss,html,json,vue,js}]
 charset = utf-8
 indent_style = space
 indent_size = 2
