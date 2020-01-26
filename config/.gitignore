@@ -1,4 +1,8 @@
 .editorconfig
+.env
+.env.development
+.env.production
+.env.test
 .eslintrc.json
 .gitattributes
 .gitignore
