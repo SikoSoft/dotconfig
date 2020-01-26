@@ -9,4 +9,5 @@
 .prettier
 
 .scannerwork
+dist
 node_modules
