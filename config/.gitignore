@@ -48,3 +48,5 @@ local.settings.json
 /App_Data
 /secrets
 /data
+
+__*
